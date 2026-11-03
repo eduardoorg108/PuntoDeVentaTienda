@@ -4,6 +4,7 @@ import cors from 'cors';
 import { verificarAdmin } from './middleware/auth.js';
 import productosRoutes from './routes/productos.js';
 import ventasRoutes from './routes/ventas.js';
+import cajaRoutes from './routes/caja.js';
 
 
 const app = express();
@@ -13,6 +14,7 @@ app.use(cors({ origin: process.env.FRONTEND_URL }));
 app.use(express.json());
 app.use('/api/productos', verificarAdmin, productosRoutes);
 app.use('/api/ventas', verificarAdmin, ventasRoutes);
+app.use('/api/caja', verificarAdmin, cajaRoutes);
 
 app.get('/api/salud', (req, res) => {
   res.json({ ok: true, mensaje: 'El servidor funciona' });

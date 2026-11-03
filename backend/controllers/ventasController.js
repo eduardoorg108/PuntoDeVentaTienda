@@ -58,8 +58,13 @@ export async function registrarVenta(req, res) {
     const claveDia = dia.replaceAll('-', '');
     const refContador = db.collection('contadores').doc(`ventas-${claveDia}`);
     const refVenta = db.collection('ventas').doc();
+    const refCorte = db.collection('cortes').doc(dia);
 
     const resultado = await db.runTransaction(async (tx) => {
+      const docCorte = await tx.get(refCorte);
+        if (!docCorte.exists || docCorte.data().estado !== 'abierto') {
+        throw new ErrorVenta(409, 'La caja no está abierta. Ábrela antes de vender');
+        }  
       const refsProductos = [...pedidos.keys()].map((id) => db.collection('productos').doc(id));
       const docsProductos = await tx.getAll(...refsProductos);
       const docContador = await tx.get(refContador);
