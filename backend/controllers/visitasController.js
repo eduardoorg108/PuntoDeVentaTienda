@@ -1,5 +1,5 @@
 import { db } from '../config/firebase.js';
-import { diaActual } from '../utils/fecha.js';
+import { diaActual, esFechaValida } from '../utils/fecha.js';
 
 const FECHA = /^\d{4}-\d{2}-\d{2}$/;
 const MES = /^\d{4}-\d{2}$/;

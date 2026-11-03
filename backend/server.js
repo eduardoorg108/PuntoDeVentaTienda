@@ -8,6 +8,7 @@ import cajaRoutes from './routes/caja.js';
 import proveedoresRoutes from './routes/proveedores.js';
 import visitasRoutes from './routes/visitas.js';
 import faltantesRoutes from './routes/faltantes.js';
+import estadisticasRoutes from './routes/estadisticas.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,6 +21,7 @@ app.use('/api/caja', verificarAdmin, cajaRoutes);
 app.use('/api/proveedores', verificarAdmin, proveedoresRoutes);
 app.use('/api/visitas', verificarAdmin, visitasRoutes);
 app.use('/api/faltantes', verificarAdmin, faltantesRoutes);
+app.use('/api/estadisticas', verificarAdmin, estadisticasRoutes);
 
 app.get('/api/salud', (req, res) => {
   res.json({ ok: true, mensaje: 'El servidor funciona' });

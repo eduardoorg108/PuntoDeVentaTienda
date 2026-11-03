@@ -1,5 +1,5 @@
 import { db } from '../config/firebase.js';
-import { diaActual } from '../utils/fecha.js';
+import { diaActual, esFechaValida } from '../utils/fecha.js';
 
 const TIPOS = ['gasto', 'retiro'];
 
