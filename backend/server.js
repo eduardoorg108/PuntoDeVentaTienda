@@ -2,12 +2,15 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import { verificarAdmin } from './middleware/auth.js';
+import productosRoutes from './routes/productos.js';
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({ origin: process.env.FRONTEND_URL }));
 app.use(express.json());
+app.use('/api/productos', verificarAdmin, productosRoutes);
 
 app.get('/api/salud', (req, res) => {
   res.json({ ok: true, mensaje: 'El servidor funciona' });
