@@ -1,0 +1,172 @@
+:root {
+  --fondo: #0f172a;
+  --tarjeta: #1e293b;
+  --borde: #334155;
+  --texto: #e2e8f0;
+  --texto-suave: #94a3b8;
+  --acento: #38bdf8;
+  --exito: #22c55e;
+  --alerta: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.texto-suave {
+  color: var(--texto-suave);
+  margin: 0 0 16px;
+}
+
+.cargando {
+  text-align: center;
+  padding: 48px;
+  color: var(--texto-suave);
+}
+
+.tarjeta {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+label {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  color: var(--texto);
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 2px solid var(--acento);
+  border-color: transparent;
+}
+
+.boton {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--acento);
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.boton:hover {
+  filter: brightness(1.1);
+}
+
+.boton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.boton-secundario {
+  background: transparent;
+  color: var(--texto);
+  border: 1px solid var(--borde);
+}
+
+.mensaje-error {
+  background: rgba(248, 113, 113, 0.12);
+  border: 1px solid var(--alerta);
+  color: var(--alerta);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 0 0 14px;
+  font-size: 0.9rem;
+}
+
+.login-pantalla {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.login-tarjeta {
+  width: 100%;
+  max-width: 380px;
+}
+
+.login-tarjeta .boton {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 12px 24px;
+  background: var(--tarjeta);
+  border-bottom: 1px solid var(--borde);
+}
+
+.navbar-marca {
+  font-weight: 700;
+}
+
+.navbar-enlaces {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.navbar-enlaces a {
+  color: var(--texto-suave);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.navbar-enlaces a:hover {
+  color: var(--texto);
+}
+
+.navbar-enlaces a.activo {
+  color: var(--acento);
+  background: rgba(56, 189, 248, 0.12);
+}
+
+.navbar-usuario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
