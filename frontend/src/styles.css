@@ -384,3 +384,227 @@ select:focus {
     grid-template-columns: 1fr;
   }
 }
+.vender-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .vender-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.buscador input {
+  margin-top: 0;
+  padding: 14px 16px;
+  font-size: 1.15rem;
+}
+
+.sugerencias {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 6px;
+}
+
+.sugerencia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--texto);
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sugerencia:hover,
+.sugerencia:focus-visible {
+  background: rgba(56, 189, 248, 0.12);
+  outline: none;
+}
+
+.ticket h2 {
+  margin-bottom: 12px;
+}
+
+.lineas {
+  max-height: 50vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.linea {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+.linea-nombre {
+  min-width: 0;
+}
+
+.linea-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cantidad-campo {
+  width: 56px;
+  margin-top: 0;
+  padding: 6px;
+  text-align: center;
+}
+
+.linea-subtotal {
+  min-width: 76px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.boton-icono {
+  padding: 4px 6px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: var(--texto-suave);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.boton-icono:hover {
+  color: var(--alerta);
+}
+
+.total-fila {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 16px 0 12px;
+}
+
+.total-fila strong {
+  font-size: 1.8rem;
+}
+
+.ticket-acciones {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+}
+
+.boton-grande {
+  padding: 14px 20px;
+  font-size: 1.15rem;
+}
+
+.aviso {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.aviso ul {
+  margin: 6px 0 0;
+  padding-left: 20px;
+}
+
+.aviso-amarillo {
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid var(--aviso);
+  color: var(--aviso);
+}
+
+.aviso-rojo {
+  background: rgba(248, 113, 113, 0.12);
+  border: 1px solid var(--alerta);
+  color: var(--alerta);
+}
+
+.etiqueta-exito {
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--exito);
+}
+
+.metodos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.metodo {
+  padding: 12px 8px;
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  color: var(--texto);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.metodo.activo {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: var(--acento);
+  color: var(--acento);
+}
+
+.billetes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.resumen-total {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.resumen-venta {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.cambio-caja {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  background: var(--fondo);
+  border-radius: 8px;
+}
+
+.cambio-caja strong {
+  font-size: 1.6rem;
+}
+
+.texto-exito {
+  color: var(--exito);
+}
+
+.texto-alerta {
+  color: var(--alerta);
+}

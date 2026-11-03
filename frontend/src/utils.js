@@ -18,3 +18,12 @@ export function diasParaCaducar(dia) {
   const diferencia = Date.parse(`${dia}T00:00:00Z`) - Date.parse(`${hoyLocal()}T00:00:00Z`);
   return Math.round(diferencia / unDia);
 }
+export const NOMBRE_TIENDA = 'Mi Tienda';
+
+export function redondear(numero) {
+  return Math.round(numero * 100) / 100;
+}
+
+export function formatoFechaHora(iso) {
+  return new Date(iso).toLocaleString('es-MX', { dateStyle: 'short', timeStyle: 'short' });
+}
